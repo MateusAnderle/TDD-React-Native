@@ -30,4 +30,19 @@ describe('Home', () => {
       wrapper.getByText('Friday');
     });
   });
+
+  test('Should contain a section to get the current weather', () => {
+    const wrapper = render(<Home />);
+    wrapper.getByTestId('weather-current');
+  });
+
+  test('Should contain a divider', () => {
+    const wrapper = render(<Home />);
+    wrapper.getByTestId('home-divider');
+  });
+
+  test('Should contain a section to get weather at given latitude and longitude', () => {
+    const wrapper = render(<Home />);
+    wrapper.getByTestId('weather-coordinates');
+  });
 });
